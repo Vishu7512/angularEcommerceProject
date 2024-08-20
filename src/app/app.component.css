@@ -1,0 +1,21 @@
+.form-control{
+    border-radius: 5px;
+    margin-left: 25px;
+    width: 600px;
+}
+
+.search-icon{
+    z-index: 10;
+    position: absolute;
+    right: 48%;
+}
+.form-group{
+    display: inline-flex;
+}
+.navbar-nav{
+    display: -webkit-inline-box;
+    margin-left: 30%;
+    font-family: ui-monospace;
+    /* align-content: space-between; */
+    position: relative;
+}
