@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { SellerDataService } from 'src/app/services/seller-data.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-login',
@@ -11,7 +14,7 @@ export class LoginComponent implements OnInit {
    mainForm: FormGroup;
   isSubmitForm = false;
 
-   constructor(private formbuilder: FormBuilder) { 
+   constructor(private formbuilder: FormBuilder , private sellerDataServices:SellerDataService,private router:Router) { 
     this.mainForm = formbuilder.group({
        name: ['', [Validators.required, Validators.minLength(3)]],
       email: ['', [Validators.required, Validators.email]],
@@ -23,19 +26,16 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
   }
-printData() {
+  printData() {
    
     this.isSubmitForm = true;
-     console.log(this.mainForm);
-    console.log(this.mainForm.value);
-
-    // console.log(this.mainForm.controls['name'].status);
-    // console.log(this.mainForm.controls['email'].value);
-    // console.log(this.mainForm.controls['password'].value);
-    // console.log(this.mainForm.controls['contact'].value);
-    // console.log(this.mainForm.controls['gender'].value);
-    // console.log(this.mainForm.controls['courses'].value);
+    // console.log(this.mainForm.value);
+    this.sellerDataServices.loginData(this.mainForm.value).subscribe((res:any) => {
+     if (res) {
+      this.router.navigate(['home'])
+      } 
+  
+    })
+         
   }
-
-
 }

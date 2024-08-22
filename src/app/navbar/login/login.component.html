@@ -3,23 +3,20 @@
     <form [formGroup] = "mainForm"> 
 
       <div class="form-group">
-        <label>email</label>
+        <label>Email</label>
         <input type="email" id="email"  formControlName="email" required>
         <p class="text-danger" *ngIf="mainForm.controls['email'].status=='INVALID' && isSubmitForm " >email required!</p>
          <span *ngIf="mainForm.controls['email'].errors?.['email']">Invalid email format!</span>
       </div>
 
       <div class="form-group">
-        <label>password</label>
+        <label>Password</label>
         <input type="password" id="password"  formControlName="password" required>
        <p class="text-danger" *ngIf="mainForm.controls['password'].status=='INVALID' && isSubmitForm" >password required!</p>
      <span *ngIf="mainForm.controls['password'].errors?.['minlength']">Minimum 6 characters are required!</span>
 
       </div>
 
-
-    
-
-      <button (click) ="printData()" class="btn">Login</button>
+      <button (click) ="printData()" class="btn" [disabled]="mainForm.invalid">Login</button>
     </form>
   </div>
