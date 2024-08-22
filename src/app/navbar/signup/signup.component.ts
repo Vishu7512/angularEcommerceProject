@@ -29,7 +29,6 @@ export class SignupComponent implements OnInit {
   }
 
   printData() {
-   
     this.isSubmitForm = true;
      console.log(this.mainForm);
     console.log(this.mainForm.value);

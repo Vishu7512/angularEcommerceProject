@@ -29,11 +29,14 @@ export class LoginComponent implements OnInit {
   printData() {
    
     this.isSubmitForm = true;
-    // console.log(this.mainForm.value);
+    console.log(this.mainForm);
+   console.log(this.mainForm.value);
     this.sellerDataServices.loginData(this.mainForm.value).subscribe((res:any) => {
-     if (res) {
+     if (res ) {
       this.router.navigate(['home'])
-      } 
+      } else{
+        console.log("login fail")
+      }
   
     })
          

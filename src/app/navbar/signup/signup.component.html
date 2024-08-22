@@ -1,7 +1,6 @@
 <div class="container">
     <h2>SignUp Form</h2>
-    <form [formGroup] = "mainForm" (ngSubmit)="printData()"
->
+    <form [formGroup] = "mainForm" (ngSubmit)="printData()">
       <div class="form-group">
         <label>Name</label>
         <input type="text" id="username"  formControlName="name" required>

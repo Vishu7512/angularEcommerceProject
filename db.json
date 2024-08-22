@@ -1,0 +1,40 @@
+{
+  "sellerData": [
+    {
+      "id": "a4b3",
+      "name": "vishal",
+      "email": "vishal@gmail.com",
+      "password": "vishal",
+      "confirmPassword": "vishal",
+      "contact": 7678961084,
+      "gender": "male"
+    },
+    {
+      "id": "12d4",
+      "name": "vishal",
+      "email": "vishalgupta7684@gmail.com",
+      "password": "vishal",
+      "confirmPassword": "vishal",
+      "contact": 7678961084,
+      "gender": "male"
+    },
+    {
+      "id": "3e75",
+      "name": "vishal",
+      "email": "vishalgupta7684@gmail.com",
+      "password": "123456",
+      "confirmPassword": "123456",
+      "contact": 7845625312,
+      "gender": "male"
+    },
+    {
+      "id": "3bad",
+      "name": "vishal",
+      "email": "vishal@gmail.com",
+      "password": "vishal",
+      "confirmPassword": "vishal",
+      "contact": 7678961084,
+      "gender": "male"
+    }
+  ]
+}

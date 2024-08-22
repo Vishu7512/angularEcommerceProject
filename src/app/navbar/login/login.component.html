@@ -1,6 +1,6 @@
 <div class="container">
     <h2>Login Here</h2>
-    <form [formGroup] = "mainForm"> 
+    <form [formGroup] = "mainForm" (ngSubmit)="printData()"> 
 
       <div class="form-group">
         <label>Email</label>
@@ -17,6 +17,6 @@
 
       </div>
 
-      <button (click) ="printData()" class="btn" [disabled]="mainForm.invalid">Login</button>
+      <button type="submit" class="btn my-3" [disabled]="mainForm.valid" >submit</button>
     </form>
   </div>
