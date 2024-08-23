@@ -23,7 +23,6 @@ export class LoginComponent implements OnInit {
       gender: ['', Validators.required]
     })
   }
-
   ngOnInit(): void {
   }
   printData() {
@@ -32,13 +31,18 @@ export class LoginComponent implements OnInit {
     console.log(this.mainForm);
    console.log(this.mainForm.value);
     this.sellerDataServices.loginData(this.mainForm.value).subscribe((res:any) => {
-     if (res ) {
-      this.router.navigate(['home'])
-      } else{
-        console.log("login fail")
-      }
-  
+        if(Object.keys(res).length==1){
+              console.log("Successful login");
+              
+         }else{
+          console.log("login Fail");
+         }
+
+        //console.log(Object.keys(data).length);
+        
     })
-         
+    // console.log(this.loginForm.value);
+    this.mainForm.reset()
+  
   }
 }

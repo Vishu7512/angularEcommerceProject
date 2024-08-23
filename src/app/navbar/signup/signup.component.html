@@ -28,7 +28,7 @@
         <label>Confirm Password</label>
         <input type="password" id="confirmPassword"  formControlName="confirmPassword" required>
        <p class="text-danger" *ngIf="mainForm.controls['confirmPassword'].status=='INVALID' && isSubmitForm" >password required!</p>
-     <span class="text-danger" *ngIf="mainForm.controls['confirmPassword'].value!=mainForm.controls['password'].value">confirm password not should match</span>
+     <span *ngIf="mainForm.controls['confirmPassword'].touched && mainForm.controls['confirmPassword'].value != mainForm.controls['password'].value" class="text-danger">Confirm password must match!</span>
 
       </div>
 
