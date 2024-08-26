@@ -1,5 +1,5 @@
 <div *ngIf="!showLogin" class="container">
-    <h2>SignUp Form</h2>
+    <h2>Seller SignUp Form</h2>
     <form [formGroup] = "mainForm" (ngSubmit)="printData()">
       <div  class="form-group">
         <label>Name</label>
@@ -70,7 +70,7 @@
 
       </div>
 
-      <button (click) ="printData()" class="btn" [disabled]="mainForm.invalid">Login</button>
+      <button (click) ="printData()" class="btn" >Login</button>
       <a class="toggle-link" (click)="openSignUp()">Don't have account? Click for SignUp</a>
     </form>
   </div>

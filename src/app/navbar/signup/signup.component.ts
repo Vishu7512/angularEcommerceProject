@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { SellerDataService } from 'src/app/services/seller-data.service';
 import { Router } from '@angular/router';
+import { log } from 'console';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-signup',
@@ -14,7 +15,7 @@ export class SignupComponent implements OnInit {
   isSubmitForm = false;
   details = [];
 
-   constructor(private formbuilder: FormBuilder , private sellerDataServices:SellerDataService , private router:Router) { 
+   constructor(private formbuilder: FormBuilder , private userService:UserService , private router:Router) {
     this.mainForm = formbuilder.group({
        name: ['', [Validators.required, Validators.minLength(3)]],
       email: ['', [Validators.required, Validators.email]],
@@ -30,15 +31,31 @@ export class SignupComponent implements OnInit {
 
   printData() {
     this.isSubmitForm = true;
-     console.log(this.mainForm);
-    console.log(this.mainForm.value);
-    this.sellerDataServices.signUpData(this.mainForm.value).subscribe((res) => {
-      if (res) {
-       this.router.navigate(['home'])
-      } 
-    })
-  }
 
+const existUser = {
+         email: this.mainForm.value['email'],
+        password: this.mainForm.value['password']
+       }
+       const newUser = this.mainForm.value;
+      this.userService.loginData(existUser).subscribe((res)=>{
+
+      if(Object.keys(res).length==1){
+         alert("User already exists...Please try different email");
+        // console.log(Object.keys(res).length)
+             
+        }else{
+          this.userService.signUpData(newUser).subscribe((res) =>{
+            console.log(res);
+          })
+        this.router.navigate(['home'])
+
+        }
+
+      })
+    
+    this.mainForm.reset()
+    }
 
 }
+
 

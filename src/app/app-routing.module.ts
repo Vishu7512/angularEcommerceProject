@@ -4,6 +4,8 @@ import { LoginComponent } from './navbar/login/login.component';
 import { SignupComponent } from './navbar/signup/signup.component';
 import { HomeComponent } from './navbar/home/home.component';
 import { SellerComponent } from './navbar/seller/seller.component';
+import { SellerHomeComponent } from './seller-home/seller-home.component';
+import { ProductsService } from './services/products.service';
 
 
 const routes: Routes = [
@@ -27,6 +29,14 @@ const routes: Routes = [
     path: "seller",
   component:SellerComponent
   },
+  {
+    path: "sellerHome",
+  component:SellerHomeComponent
+  },
+  {
+    path: "product",
+  component:ProductsService
+  }
 ];
 
 @NgModule({

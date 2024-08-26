@@ -37,7 +37,7 @@ export class SellerComponent implements OnInit {
     console.log(this.mainForm.value);
     this.sellerDataServices.signUpData(this.mainForm.value).subscribe((res) => {
       if (res) {
-       this.router.navigate(['home'])
+       this.router.navigate(['sellerHome'])
       } 
     })
   }

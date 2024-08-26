@@ -1,0 +1,52 @@
+<!-- <p>seller-home works!</p>
+<P>THIS IS USER COMPONENT</P>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">phone</th>
+      <th scope="col">username</th>
+    </tr>
+  </thead>
+ <tbody>
+     <tr *ngFor="let element of details">
+        <th scope="row">{{element['id']}}</th>
+        <td>{{element['name']}}</td>
+        <td>{{element['phone']}}</td>
+        <td>{{element['username']}}</td>
+        <button type="button" class="btn btn-primary" (click)="deleteUserById(element['id'])">Delete</button>
+      </tr>
+  </tbody>     -->
+  
+    <!-- <button type="button" class="btn btn-primary" (click)="addUser()">Add-User</button> -->
+<!-- </table> -->
+
+
+<!-- Existing table code -->
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Username</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let element of details">
+      <th scope="row">{{element['id']}}</th>
+      <td>{{element['name']}}</td>
+      <td>{{element['phone']}}</td>
+      <td>{{element['username']}}</td>
+      <td>
+        <button type="button" class="btn btn-primary" (click)="editUser(element)">Update</button>
+        <button type="button" class="btn btn-danger" (click)="deleteUserById(element['id'])">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+
