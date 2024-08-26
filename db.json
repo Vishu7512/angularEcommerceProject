@@ -19,58 +19,13 @@
       "gender": "male"
     },
     {
-      "id": "4205",
-      "name": "",
-      "email": "nilima@gmail.com",
-      "password": "nilima@gmail.com",
-      "confirmPassword": "",
-      "contact": "",
-      "gender": ""
-    },
-    {
-      "id": "5245",
-      "name": "",
-      "email": "nilima@gmail.com",
-      "password": "nilima@gmail.com",
-      "confirmPassword": "",
-      "contact": "",
-      "gender": ""
-    },
-    {
-      "id": "ae18",
-      "name": "vishal.gupta",
+      "id": "10ea",
+      "name": "vishal",
       "email": "vishal@gmail.com",
       "password": "vishal@gmail.com",
       "confirmPassword": "vishal@gmail.com",
-      "contact": 7983124565,
+      "contact": 7538679577,
       "gender": "male"
-    },
-    {
-      "id": "b95b",
-      "name": "",
-      "email": "vishal@gmail.com",
-      "password": "vishal@gmail.com",
-      "confirmPassword": "",
-      "contact": "",
-      "gender": ""
-    },
-    {
-      "id": "e203",
-      "name": "",
-      "email": "nilima@gmail.com",
-      "password": "nilima@gmail.com",
-      "confirmPassword": "",
-      "contact": "",
-      "gender": ""
-    },
-    {
-      "id": "cdcf",
-      "name": "",
-      "email": "nilima@gmail.com",
-      "password": "nilima@gmail.com",
-      "confirmPassword": "",
-      "contact": "",
-      "gender": ""
     }
   ],
   "userData": [
@@ -90,29 +45,6 @@
     }
   ],
   "product": [
-    {
-      "id": "5",
-      "name": "Chelsey Dietrich",
-      "username": "Kamren",
-      "email": "Lucio_Hettinger@annie.ca",
-      "address": {
-        "street": "Skiles Walks",
-        "suite": "Suite 351",
-        "city": "Roscoeview",
-        "zipcode": "33263",
-        "geo": {
-          "lat": "-31.8129",
-          "lng": "62.5342"
-        }
-      },
-      "phone": "(254)954-1289",
-      "website": "demarco.info",
-      "company": {
-        "name": "Keebler LLC",
-        "catchPhrase": "User-centric fault-tolerant solution",
-        "bs": "revolutionize end-to-end systems"
-      }
-    },
     {
       "id": "6",
       "name": "Mrs. Dennis Schulist",
