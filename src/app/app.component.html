@@ -5,8 +5,8 @@
   <div class="navbar navbar-dark bg-primary shadow-sm">
     <div class="navbar-brand align-item-center d-felx">
       <i style='font-size:24px' class="fas fa-shipping-fast"></i>
-        <strong style='font-size:24px' >E-Commerce </strong>
-      <div class="form-group">
+        <strong style='font-size:24px' >E-Cart </strong>
+      <div class="form-group" *ngIf="menuType ==='default'">
         <input type="text" class="form-control" placeholder="search item">
       </div>
       <span class="fas fa-search search-icon"></span>
@@ -31,5 +31,33 @@
     </div>
   </div>
 </header>
+
+
+<div class="product-list-wrapper">
+<h1>Trendy Products</h1>
+<div class="row">
+  <div class="col-sm-3" *ngFor="let item of trendyProducts">
+    <div class="product-item">
+      <img src="{{item['image']}}" alt="">
+    <div class="product-details">
+      <h6 class="name-head">{{item['name']}}</h6>
+      <div class="product-price">
+        <h6>Price:{{item['price']}}</h6>
+      </div>
+      <div class="product-color">
+        <h6>Color:{{item['color']}}</h6>
+      </div>
+    </div>
+    <div class="product-footer">
+      <a routerLink="/details/{{item['id']}}">View Details</a>
+      <a href="">Add to Cart</a>
+
+    </div>
+    </div>
+  </div>
+
+</div>
+</div>
+
 
 <router-outlet></router-outlet>
